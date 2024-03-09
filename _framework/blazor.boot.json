@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "ExoclockDBQuery.dll": "sha256-PisMMHnCyR+KfJ84nleCmRqadEIzXD9OzDskMBLXA04=",
+      "ExoclockDBQuery.dll": "sha256-jQMh40aqas8JqcBDpaAUtwNzgnBNa7qGkz\/mqNZ7RP4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-PfvETnPeyhbMaLhcgzkY8NqQyMk+v3gIUXzt96tJpy0=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-v9CSQNhnr7xZuMGMxDwjH6gsDM3uKDJbqL\/h8iHRiEw=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-SCaFQW9x3LaCGVYLhpld5bcsAApaWsOfqMaYMQcUuIE=",
