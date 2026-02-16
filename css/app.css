@@ -1,4 +1,57 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+﻿/* Priority badge styles for grid */
+.priority-badge {
+    display: inline-block;
+    padding: 0.25em 0.8em;
+    border-radius: 1em;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    min-width: 60px;
+    letter-spacing: 0.02em;
+}
+.priority-low {
+    background: #6c757d !important;
+}
+.priority-medium {
+    background: #17a2b8 !important;
+}
+.priority-high {
+    background: #ffc107 !important;
+    color: #333 !important;
+}
+.priority-alert {
+    background: #dc3545 !important;
+}
+/* Make sidebar wider so nav button text fits in one line */
+.sidebar {
+    width: 300px;
+    min-width: 260px;
+    max-width: 340px;
+    background: #23272f;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+    height: 100vh;
+}
+@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+/* Make nav-link buttons grow to fit their text and show icons */
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    color: #d7d7d7;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 1.05rem;
+    border-radius: 4px;
+    transition: background 0.15s, color 0.15s;
+}
+.nav-link .oi {
+    margin-right: 0.5em;
+    font-size: 1.1em;
+}
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
