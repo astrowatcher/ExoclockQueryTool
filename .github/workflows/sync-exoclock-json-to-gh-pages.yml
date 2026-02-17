@@ -1,0 +1,51 @@
+name: Sync exoclockData.json to gh-pages
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "exoclockData.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-exoclock-json-to-gh-pages
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main (source)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+
+      - name: Checkout gh-pages (target)
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Copy JSON into gh-pages root
+        run: |
+          cp -f main/exoclockData.json gh-pages/exoclockData.json
+
+      - name: Commit and push to gh-pages if changed
+        run: |
+          cd gh-pages
+
+          if git diff --quiet -- exoclockData.json; then
+            echo "No changes to sync."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add exoclockData.json
+          git commit -m "Sync exoclockData.json from main"
+          git push
